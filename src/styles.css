@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+#toast-container {
+  z-index: 9999; 
+}
+
+.toast-success {
+  background-color: #4CAF50 !important; 
+  color: white !important; 
+  width: 250px;
+  border-radius: 15px;
+  margin-top: 15px;
+  text-align: center;
+  min-height: 25px;
+}
+
+.toast-error {
+  background-color: #F44336 !important; 
+  color: white !important;
+  width: 250px;
+  border-radius: 15px;
+  margin-top: 15px;
+  text-align: center
+}
+
+.toast-container {
+  position: fixed !important;
+  top: 20px;
+  right: 20px;
+}

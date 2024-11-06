@@ -1,0 +1,56 @@
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://polyfill.io/v3/polyfill.min.js"></script>
+<style>
+#cadastroBox{
+    background-color: rgba(133, 133, 133, 0.7);
+    width: 800px;
+    height: 500px;
+    margin: 10px auto;
+    border-radius: 25px;
+}
+#info{
+    margin-top: 140px;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input{
+    width: 400px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.firstInput{
+    padding-top: 100px;
+}
+
+.othersInputs{
+    margin-top: 40px
+}
+
+.botao{
+    border: 1px solid rgb(82, 82, 82);
+    padding: 10px; width: 100px;
+    border-radius: 10px;
+    background-color: rgb(65, 56, 56);
+    color: white;
+}
+
+.botao:hover{
+    background-color: rgb(7, 7, 7);
+}
+
+</style>
+<div id="info">Cadastrar Empresa</div>
+
+<div id="cadastroBox">
+    <div class="firstInput">Nome</div>
+    <input type="text"  required name="nome" [(ngModel)]="nome">
+    <div class="othersInputs">Cnpj</div>
+    <input type="text" required name="cnpj" [(ngModel)]="cnpj">
+    <br><br><br><br>
+    <button type="button" (click)="cadastrar()" class="buttonSubmit" class="botao">Cadastrar</button>
+    <a href="/"  style="margin-left: 20px;" class="botao" type="button">voltar</a>
+</div>
