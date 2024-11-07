@@ -1,11 +1,18 @@
-
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://polyfill.io/v3/polyfill.min.js"></script>
 <style>
-    #body{
+
+    #body {
         background-image: url('pic.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         margin: 0;
-        text-align: center;
         padding: 0;
         min-height: 100vh;
+        text-align: center;
+        flex-direction: column;
+        display: flex;
     }
 
     #header{
@@ -14,7 +21,7 @@
     }
 
     #header a{
-      margin-left: 20px;
+      margin-left: 40px;
       display: inline-flex;
       margin-top: 10px;
       text-decoration: none;
@@ -37,12 +44,11 @@
         @if (logado == true){
             @if(admin == true){
                 <a href="/cadastro/empresa">Cadastrar Empresa</a>
-            }
-            @if(admin == true){
                 <a href="/cadastro/socio">Cadastrar Sócio</a>
+                <a href="/listagem/empresa">Listagem Empresas</a>
+                <a href="/listagem/socio">Listagem Sócios</a>
             }
-            <a href="/listagem/empresa">Listagem Empresas</a>
-            <a href="/listagem/socio">Listagem Sócios</a>
+            <a href="/minhaEmpresa">Informações da minha empresa</a>
             <a (click)="deslogar()" type="button" style="cursor: pointer;">Deslogar</a>
         }
     </div>

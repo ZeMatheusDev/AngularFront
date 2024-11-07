@@ -9,7 +9,9 @@ import { ListagemSocioComponent } from './listagem-socio/listagem-socio.componen
 import { ListagemEmpresaComponent } from './listagem-empresa/listagem-empresa.component';
 import { EmpresaComponent } from './empresa/empresa.component';
 import { authNotLogginGuard } from './auth-not-loggin.guard';
-
+import { MinhaEmpresaComponent } from './minha-empresa/minha-empresa.component';
+import { EditEmpresaComponent } from './edit-empresa/edit-empresa.component';
+import { EditUsuarioComponent } from './edit-usuario/edit-usuario.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -18,4 +20,7 @@ export const routes: Routes = [
     { path: 'cadastro/socio', component:  SocioComponent, canActivate: [authNotLogginGuard]},
     { path: 'listagem/socio', component:  ListagemSocioComponent, canActivate: [authNotLogginGuard]},
     { path: 'listagem/empresa', component:  ListagemEmpresaComponent, canActivate: [authNotLogginGuard]},
+    { path: 'minhaEmpresa', component:  MinhaEmpresaComponent, canActivate: [authNotLogginGuard]},
+    { path: 'editEmpresa/:token', component:  EditEmpresaComponent, canActivate: [authNotLogginGuard]},
+    { path: 'editSocio/:token', component:  EditUsuarioComponent, canActivate: [authNotLogginGuard]},
 ];

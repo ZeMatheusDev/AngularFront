@@ -1,1 +1,66 @@
-<p>listagem-empresa works!</p>
+<style>
+    .box{
+        background-color: rgba(141, 141, 141, 0.7);
+        height: 150px;
+        width: 300px;
+        margin: 50px auto;
+        border-radius: 20px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box span{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+
+    .edit{
+        width: 100px;
+        border-radius: 12px;
+        background-color: rgb(38, 252, 66);
+        color: rgb(27, 27, 27);
+    }
+
+    .edit:hover{
+        background-color: rgb(184, 255, 199);
+        color: rgb(68, 68, 68);
+    }
+
+    .delete{
+        margin-left: 20px;
+        width: 100px;
+        border-radius: 12px;
+        background-color: rgb(173, 8, 8);
+        color: white;
+    }
+
+    .delete:hover{
+        background-color: rgb(226, 136, 136);
+        color: white;
+    }
+
+    .restaurar{
+        margin-left: 20px;
+        width: 180px;
+        margin-top: 30px;
+        min-height: 40px;
+        border-radius: 12px;
+        background-color: rgb(121, 121, 121);
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+    }
+
+    .restaurar:hover{
+        background-color: rgb(24, 24, 24);
+    }
+</style>
+<button class="restaurar" (click)="restaurar()">Restaurar Empresas</button>
+<div class="box" *ngFor="let empresa of empresas">
+    <br>
+    Empresa - <span>{{empresa.nome}}</span>
+    <br>
+    cnpj - <span>{{empresa.cnpj}}</span>
+    <br><br>
+    <button class="edit" (click)="editar(empresa.token)">Editar</button>
+    <button class="delete" (click)="deletar(empresa.token)">Apagar</button>
+</div>

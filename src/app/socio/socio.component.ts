@@ -44,7 +44,7 @@ export class SocioComponent {
         this.router.navigate(['/']);
       }
       else{
-        this.toastr.error('Erro ao cadastrar sócio, contate um administrador.'); 
+        this.toastr.error('Erro ao cadastrar sócio, usuário já existe.'); 
       }
     })
     .catch(error => {
